@@ -47,7 +47,7 @@ public class WebServlet extends HttpServlet {
 		try {
 			conn = DriverManager.getConnection(url, usuario, password);
 			if (conn != null) {
-				System.out.println("ConexiÃ³n a base de datos " + url + " ... Ok");
+				System.out.println("ConexiÃƒÂ³n a base de datos " + url + " ... Ok");
 			}
 
 		} catch (SQLException ex) {
@@ -67,23 +67,17 @@ public class WebServlet extends HttpServlet {
 		out.println("<html>");
 		out.println("<head><title>Datos a Introducir a la Base de Datos</title></head>");
 		out.println("<body>");
-		out.println("<h1>Estos son los datos que se introducirán a la Base de Datos 'Coches':</h1>");
+		out.println("<h1>Estos son los datos que se introducirÃ¡n a la Base de Datos 'Coches':</h1>");
 		out.println("<h2>"+nombre+"</h2>");
 		out.println("<h2>"+email+"</h2>");
 		out.println("<h2>"+telefono+"</h2>");
 		out.println("<h2>"+opinion+"</h2>");
-		out.println("<p>Si observa que en esta página los datos no están en mayúsculas (si es así como lo ha indicado en los cuadros del formulario), no se preocupe, en la base de datos SÍ están en mayúsculas.</p>");
 		out.println("<hr/>");
-		out.println("<h1>Estos son los registros actuales de la base de datos:</h1>");
-		out.println("<h2>|Matrícula|\t|Marca|\t|Modelo|\t|Color|</h2>");
-		
 		out.println("</body></html>");
 
 		try {
 			Statement st = conn.createStatement();
-			//st.execute("delete from TablaPrueba where nombre='Alfredo'");
 			st.execute("insert into feedback values ('"+nombre+"','"+email+"','"+telefono+"','"+opinion+"')");
-			//st.execute("update TablaPrueba set codigo=22223 where nombre='Alfredo'");
 			
 			
 			
