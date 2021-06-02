@@ -47,7 +47,7 @@ public class WebServlet extends HttpServlet {
 		try {
 			conn = DriverManager.getConnection(url, usuario, password);
 			if (conn != null) {
-				System.out.println("Conexion a base de datos " + url + " ... Ok");
+				System.out.println("Conexión a base de datos " + url + " ... Ok");
 			}
 
 		} catch (SQLException ex) {
