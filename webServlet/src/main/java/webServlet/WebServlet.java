@@ -47,7 +47,7 @@ public class WebServlet extends HttpServlet {
 		try {
 			conn = DriverManager.getConnection(url, usuario, password);
 			if (conn != null) {
-				System.out.println("ConexiÃ³n a base de datos " + url + " ... Ok");
+				System.out.println("Conexion a base de datos " + url + " ... Ok");
 			}
 
 		} catch (SQLException ex) {
@@ -67,7 +67,7 @@ public class WebServlet extends HttpServlet {
 		out.println("<html>");
 		out.println("<head><title>Datos a Introducir a la Base de Datos</title></head>");
 		out.println("<body>");
-		out.println("<h1>Estos son los datos que se introducirán a la Base de Datos 'Coches':</h1>");
+		out.println("<h1>Estos son los datos que se introducirán a la Base de Datos 'Feedback':</h1>");
 		out.println("<h2>"+nombre+"</h2>");
 		out.println("<h2>"+email+"</h2>");
 		out.println("<h2>"+telefono+"</h2>");
